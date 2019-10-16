@@ -1,6 +1,6 @@
 
 ### Date created
-16 October 2019
+16 Oct 2019
 
 ### Git and GitHub Practice
 
