@@ -29,11 +29,11 @@ def get_filters():
     city = cityname()
 
     # get user input for month (all, january, february, ... , june)
-    print('Select a month january, february, march, april, may, june or all ?')
+    print('Select a month January, February, March, April, May, June or all?')
     def monthname():
-        month = str(input('Type month :'))
+        month = str(input('Type month:')).lower()
         if month not in months:
-            print('Please select correct month among january, february, march, april, may, june or all ?.')
+            print('Please select correct month among January, February, March, April, May, June or all?')
             month = monthname()
         return month
     month = monthname()
