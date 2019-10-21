@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
+              'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
-citynames = ['chicago', 'new york city', 'washington']
+citynames = ['chicago', 'new york', 'washington']
 months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
 days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday','all']
 def get_filters():
@@ -21,29 +21,29 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     print('Would you like to see data for Chicago, New York City or Washington ?')
     def cityname():
-        city = str(input('Type city name :'))
+        city = str(input('Type city name :')).lower()
         if city not in citynames:
-            print('Please select correct city among Chicago, New York City or Washington.')
+            print('Please select correct city among Chicago, New York or Washington.')
             city = cityname()
         return city
     city = cityname()
 
     # get user input for month (all, january, february, ... , june)
-    print('Select a month january, february, march, april, may, june or all ?')
+    print('Select a month January, February, March, April, May, June or all?')
     def monthname():
-        month = str(input('Type month :'))
+        month = str(input('Type month:')).lower()
         if month not in months:
-            print('Please select correct month among january, february, march, april, may, june or all ?.')
+            print('Please select correct month among January, February, March, April, May, June or all?')
             month = monthname()
         return month
     month = monthname()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    print('Select a day monday, tuesday, wednesday, thursday, friday, saturday, sunday or all ?')
+    print('Select a day Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all?')
     def dayname():
-        day = str(input('Type day :'))
+        day = str(input('Type day :')).lower()
         if day not in days:
-            print('Please select correct day among january, february, march, april, may, june or all ?.')
+            print('Please select correct day among Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all?')
             day = dayname()
         return day
     day = dayname()
