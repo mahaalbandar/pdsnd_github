@@ -39,11 +39,11 @@ def get_filters():
     month = monthname()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    print('Select a day monday, tuesday, wednesday, thursday, friday, saturday, sunday or all ?')
+    print('Select a day Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all?')
     def dayname():
-        day = str(input('Type day :'))
+        day = str(input('Type day :')).lower()
         if day not in days:
-            print('Please select correct day among january, february, march, april, may, june or all ?.')
+            print('Please select correct day among Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all?')
             day = dayname()
         return day
     day = dayname()
